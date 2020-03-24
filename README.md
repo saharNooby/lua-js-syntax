@@ -81,14 +81,9 @@ let fBlock = x => {
     return x * 10
 }
 
-let fTwoArgs = (x, y) => x + y
+let fWithTwoArgs = (x, y) => x + y
 
-// if statement
-if (10 > 1) {
-    print('ten is more that one')
-}
-
-// while loop and break statement
+// if statement, while loop and break statement
 let counter = 10
 while (true) {
     print(counter)
@@ -179,8 +174,7 @@ if (conditionA && conditionB) {
     print('all ok')
 }
 
-// Comparison operators
-// >, <, >=, <=, ==, !=
+// Comparison operators: >, <, >=, <=, ==, !=
 if (1 != 10) {
     print('all ok')
 }
@@ -198,7 +192,7 @@ let compound = 100
 compound *= 10
 compound += 5
 
-// Increments and decrement statements
+// Increment and decrement statements
 let incremented = 1
 incremented++
 
@@ -276,14 +270,9 @@ local fBlock = function(x)
     return x * 10
 end
 
-local fTwoArgs = function(x, y) return x + y end
+local fWithTwoArgs = function(x, y) return x + y end
 
--- if statement
-if (10 > 1) then
-    print('ten is more that one')
-end
-
--- while loop and break statement
+-- if statement, while loop and break statement
 local counter = 10
 while (true) do
     print(counter)
@@ -374,8 +363,7 @@ if (conditionA and conditionB) then
     print('all ok')
 end
 
--- Comparison operators
--- >, <, >=, <=, ==, !=
+-- Comparison operators: >, <, >=, <=, ==, !=
 if (1 ~= 10) then
     print('all ok')
 end
@@ -393,7 +381,7 @@ local compound = 100
 compound = compound * 10
 compound = compound + 5
 
--- Increments and decrement statements
+-- Increment and decrement statements
 local incremented = 1
 incremented = incremented + 1
 
