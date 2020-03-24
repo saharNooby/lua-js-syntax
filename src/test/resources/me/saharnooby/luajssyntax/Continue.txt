@@ -1,0 +1,57 @@
+for (v of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) {
+
+    consume('loop begin')
+
+
+    if (v % 2 != 0) {
+        continue
+    }
+
+    for (let i = 0; i <= v; i++) {
+
+        consume('nested begin')
+
+        if (i % 2 == 0) {
+            continue
+        }
+
+        consume(i)
+
+        consume('nested end')
+    }
+
+    consume('loop end')
+}
+
+===
+
+for i, v in ipairs({1, 2, 3, 4, 5, 6, 7, 8, 9, 10}) do
+
+    consume('loop begin')
+
+
+    if (v % 2 ~= 0) then
+        goto end_1
+    end
+
+    local i = 0;
+    while (i <= v) do
+        consume('nested begin')
+
+        if (i % 2 == 0) then
+            goto end_2
+        end
+
+        consume(i)
+
+        consume('nested end')
+
+        ::end_2::
+
+        i = i + 1;
+    end
+
+    consume('loop end')
+
+    ::end_1::
+end

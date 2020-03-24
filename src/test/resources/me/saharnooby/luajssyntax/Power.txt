@@ -1,0 +1,7 @@
+consume(32 ** 3)
+consume(3478 ** 0.243)
+
+===
+
+consume(32 ^ 3)
+consume(3478 ^ 0.243)

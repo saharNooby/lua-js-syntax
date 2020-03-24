@@ -1,0 +1,33 @@
+x = [33, 3454, 4545]
+
+consume(v, i)
+
+for (v of x) {
+    consume(v)
+}
+
+consume(v, i)
+
+for (v, i of x) {
+    consume(v, i)
+}
+
+consume(v, i)
+
+===
+
+x = {33, 3454, 4545}
+
+consume(v, i)
+
+for _, v in ipairs(x) do
+    consume(v)
+end
+
+consume(v, i)
+
+for i, v in ipairs(x) do
+    consume(v, i)
+end
+
+consume(v, i)

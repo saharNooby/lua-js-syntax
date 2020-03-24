@@ -1,0 +1,47 @@
+consume(x)
+
+for (x = 10; x < 100; x += 10) {
+    consume(x)
+}
+
+consume(x)
+
+consume(i)
+
+for (let i = 0; i < 10; i++) {
+    consume(i)
+}
+
+consume(i)
+
+for (let i = 0; ; i++) {
+    if (i >= 10) {
+        break
+    }
+
+    consume(i)
+}
+
+===
+
+consume(x)
+
+x = 10
+while x < 100 do
+    consume(x)
+    x = x + 10
+end
+
+consume(x)
+
+consume(i)
+
+for i = 0, 9, 1 do
+    consume(i)
+end
+
+consume(i)
+
+for i = 0, 9, 1 do
+    consume(i)
+end

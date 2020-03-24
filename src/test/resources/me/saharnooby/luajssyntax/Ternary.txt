@@ -1,0 +1,27 @@
+consume(1 > 2 ? 'a' : 'b')
+consume(1 < 2 ? 'a' : 'b')
+
+consume(1 > 2 ? 'a' : 2 > 3 ? 'b' : 'c')
+consume(1 < 2 ? 'a' : 2 > 3 ? 'b' : 'c')
+consume(1 > 2 ? 'a' : 2 < 3 ? 'b' : 'c')
+consume(1 < 2 ? 'a' : 2 < 3 ? 'b' : 'c')
+
+// Edge case
+consume(2 > 1 ? false : true)
+consume(2 > 1 ? nil : {})
+
+===
+
+consume(1 > 2 and 'a' or 'b')
+consume(1 < 2 and 'a' or 'b')
+
+consume(1 > 2 and 'a' or (2 > 3 and 'b' or 'c'))
+consume(1 < 2 and 'a' or (2 > 3 and 'b' or 'c'))
+consume(1 > 2 and 'a' or (2 < 3 and 'b' or 'c'))
+consume(1 < 2 and 'a' or (2 < 3 and 'b' or 'c'))
+
+-- Edge case
+consume(true)
+consume({})
+-- consume(2 > 1 and false or true)
+-- consume(2 > 1 and nil or {})

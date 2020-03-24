@@ -1,0 +1,27 @@
+list = [-100, -23.2323, -1, 0, 1, 443, 2389.34]
+
+for (x of list) {
+    for (y of list) {
+        consume(x > y)
+        consume(x < y)
+        consume(x >= y)
+        consume(x <= y)
+        consume(x == y)
+        consume(x != y)
+    }
+}
+
+===
+
+list = {-100, -23.2323, -1, 0, 1, 443, 2389.34}
+
+for ix, x in ipairs(list) do
+    for iy, y in ipairs(list) do
+        consume(x > y)
+        consume(x < y)
+        consume(x >= y)
+        consume(x <= y)
+        consume(x == y)
+        consume(x ~= y)
+    end
+end

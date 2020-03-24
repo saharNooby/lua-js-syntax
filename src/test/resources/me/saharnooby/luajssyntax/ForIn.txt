@@ -1,0 +1,33 @@
+x = {a: 1, b: 2, c: 3}
+
+consume(k, v)
+
+for (k in pairs(x)) {
+    consume(k)
+}
+
+consume(k, v)
+
+for (k, v in pairs(x)) {
+    consume(k, v)
+}
+
+consume(k, v)
+
+===
+
+x = {a = 1, b = 2, c = 3}
+
+consume(k, v)
+
+for k in pairs(x) do
+    consume(k)
+end
+
+consume(k, v)
+
+for k, v in pairs(x) do
+    consume(k, v)
+end
+
+consume(k, v)

@@ -1,0 +1,47 @@
+function f() {
+    return 3487943
+}
+
+function g(x) {
+    return x + 10
+}
+
+function h(x, y) {
+    consume(x)
+    consume(y)
+}
+
+consume(f())
+consume(g(34.34))
+h(23, 67)
+
+let loc = function(x) {
+    return x * 28923
+}
+
+consume(loc(23))
+
+===
+
+function f()
+    return 3487943
+end
+
+function g(x)
+    return x + 10
+end
+
+function h(x, y)
+    consume(x)
+    consume(y)
+end
+
+consume(f())
+consume(g(34.34))
+h(23, 67)
+
+local function loc(x)
+    return x * 28923
+end
+
+consume(loc(23))

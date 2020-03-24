@@ -1,0 +1,41 @@
+x = 13
+
+consume(x)
+
+{
+    y = 11
+    consume(y)
+}
+
+consume(y)
+
+a, b = 44, 56
+
+consume(a, b)
+
+c, d = 6, 7, 8
+
+e, f, g = 1, 2
+consume(e, f, g)
+
+===
+
+x = 13
+
+consume(x)
+
+do
+    y = 11
+    consume(y)
+end
+
+consume(y)
+
+a, b = 44, 56
+
+consume(a, b)
+
+c, d = 6, 7, 8
+
+e, f, g = 1, 2
+consume(e, f, g)

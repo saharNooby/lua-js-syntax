@@ -1,0 +1,25 @@
+list = [-100, -23.2323, -1, 0, 1, 443, 2389.34]
+
+for (x of list) {
+    for (y of list) {
+        consume(x & y)
+        consume(x | y)
+        consume(x ^ y)
+        consume(x << y)
+        consume(x >> y)
+    }
+}
+
+===
+
+list = {-100, -23.2323, -1, 0, 1, 443, 2389.34}
+
+for ix, x in ipairs(list) do
+    for iy, y in ipairs(list) do
+        consume(bit32.band(x, y))
+        consume(bit32.bor(x, y))
+        consume(bit32.bxor(x, y))
+        consume(bit32.lshift(x, y))
+        consume(bit32.rshift(x, y))
+    end
+end

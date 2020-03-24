@@ -1,0 +1,15 @@
+let x = 340
+consume(x)
+x++
+consume(x)
+x--
+consume(x)
+
+===
+
+local x = 340
+consume(x)
+x = x + 1
+consume(x)
+x = x - 1
+consume(x)

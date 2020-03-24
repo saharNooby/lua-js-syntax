@@ -1,0 +1,35 @@
+let a = [1, 2, 3]
+let b = ['test', 4.55,]
+let c = []
+let d = [[b]]
+
+consume(a)
+consume(b)
+consume(b[1])
+consume(b[2])
+consume(b[3])
+consume(c)
+consume(c[1])
+consume(c[2])
+consume(d)
+consume(d[1])
+consume(d[1][1])
+
+===
+
+local a = {1, 2, 3}
+local b = {'test', 4.55}
+local c = {}
+local d = {{b}}
+
+consume(a)
+consume(b)
+consume(b[1])
+consume(b[2])
+consume(b[3])
+consume(c)
+consume(c[1])
+consume(c[2])
+consume(d)
+consume(d[1])
+consume(d[1][1])

@@ -1,0 +1,41 @@
+try {
+
+    try {
+
+        let a = {}
+        let c = a.b
+
+    } catch (eNested) {
+        consume('nested error!')
+    }
+
+    let x = {}
+    x.y()
+
+} catch (e) {
+    consume('error!')
+}
+
+===
+
+local r, e = pcall(function()
+
+    local rNested, eNested = pcall(function()
+
+         local a = {}
+         local c = a.b
+
+    end)
+
+    if not rNested then
+        consume('nested error!')
+    end
+
+    local x = {}
+    x.y()
+
+end)
+
+if not r then
+    consume('error!')
+end

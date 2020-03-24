@@ -1,0 +1,41 @@
+f = () => {return 3487943}
+
+g = (x) => x + 10
+
+h = (x, y) => {
+    consume(x)
+    consume(y)
+}
+
+consume(f())
+consume(g(34.34))
+h(23, 67)
+
+single_arg = m => m * 347843
+
+consume(single_arg(2324))
+
+===
+
+function f()
+    return 3487943
+end
+
+function g(x)
+    return x + 10
+end
+
+function h(x, y)
+    consume(x)
+    consume(y)
+end
+
+consume(f())
+consume(g(34.34))
+h(23, 67)
+
+function single_arg(m)
+    return m * 347843
+end
+
+consume(single_arg(2324))

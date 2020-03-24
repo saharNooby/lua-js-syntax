@@ -1,0 +1,74 @@
+let x = 30
+let y = 20
+
+if (x > y) {
+    consume(1)
+}
+
+if (x > y)
+    consume(1)
+
+if (x < y) {
+    consume(1)
+} else {
+    consume(3)
+}
+
+if (x < y)
+    consume(1)
+ else
+    consume(3)
+
+let z = 1
+while (z < 100) {
+    if (x < 10) {
+        consume(4)
+    } else if (z < 50) {
+        consume(5)
+    } else if (z < 30) {
+        consume(6)
+    } else {
+        consume(7)
+    }
+
+    z++
+}
+
+===
+
+local x = 30
+local y = 20
+
+if x > y then
+    consume(1)
+end
+
+if x > y then
+    consume(1) end
+
+if x < y then
+    consume(1)
+else
+    consume(3)
+end
+
+if (x < y) then
+    consume(1)
+ else
+    consume(3) end
+
+local z = 1
+
+while (z < 100) do
+    if (x < 10) then
+        consume(4)
+    elseif (z < 50) then
+        consume(5)
+    elseif (z < 30) then
+        consume(6)
+    else
+        consume(7)
+    end
+
+    z = z + 1
+end

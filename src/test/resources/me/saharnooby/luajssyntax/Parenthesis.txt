@@ -1,0 +1,11 @@
+let x = ((5 * 6) * 7 / 8)
+let y = 5 * 6 * 7 / 8
+
+consume(x == y)
+
+===
+
+local x = ((5 * 6) * 7 / 8)
+local y = 5 * 6 * 7 / 8
+
+consume(x == y)

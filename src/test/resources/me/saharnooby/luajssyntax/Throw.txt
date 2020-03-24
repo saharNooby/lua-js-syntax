@@ -1,0 +1,20 @@
+
+try {
+
+    throw 'message'
+
+} catch (e) {
+    consume('error!', e)
+}
+
+===
+
+local r, e = pcall(function()
+
+    error('message')
+
+end)
+
+if not r then
+    consume('error!', e)
+end

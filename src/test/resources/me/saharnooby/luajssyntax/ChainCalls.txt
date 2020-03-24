@@ -1,0 +1,19 @@
+let x = {f: () => {g: () => 100}}
+
+consume(x.f().g())
+consume(x.f()['g']())
+
+x = {f: () => {g: () => {t: 'test'}}}
+
+consume(x.f()['g']().t)
+
+===
+
+local x = {f = function() return {g = function() return 100 end} end}
+
+consume(x.f().g())
+consume(x.f()['g']())
+
+local x = {f = function() return {g = function() return {t = 'test'} end} end}
+
+consume(x.f()['g']().t)

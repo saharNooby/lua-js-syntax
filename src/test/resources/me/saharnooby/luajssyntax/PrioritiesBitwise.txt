@@ -1,0 +1,51 @@
+consume(127 & 31 | 16)
+consume(16 | 127 & 31)
+
+consume(127 & 31 ^ 16)
+consume(16 ^ 127 & 31)
+
+consume(8 << 1 & 16)
+consume(8 << 1 | 8)
+
+consume(8 << 1 >> 1)
+consume(8 >> 1 << 1)
+
+consume(1 << 3 > 1 << 2)
+consume(1 << 3 < 1 << 2)
+consume(1 << 2 == 1 << 2)
+
+consume(1 ^ 1 && 1 << 2)
+consume(1 | 1 && 1 << 2)
+
+consume(1 << 2 + 2)
+consume(2 + 2 | 1)
+
+consume('test ' .. 1 << 3)
+consume(1 << 3 .. ' test')
+
+===
+
+consume(bit32.bor(bit32.band(127, 31), 16))
+consume(bit32.bor(bit32.band(127, 31), 16))
+
+consume(bit32.bxor(bit32.band(127, 31), 16))
+consume(bit32.bxor(bit32.band(127, 31), 16))
+
+consume(bit32.band(bit32.lshift(8, 1), 16))
+consume(bit32.bor(bit32.lshift(8, 1), 8))
+
+consume(8)
+consume(8)
+
+consume(true)
+consume(false)
+consume(true)
+
+consume(bit32.bxor(1, 1) and bit32.lshift(1, 2));
+consume(bit32.bor(1, 1) and bit32.lshift(1, 2));
+
+consume(bit32.lshift(1, 2 + 2))
+consume(bit32.bor(2 + 2, 1))
+
+consume('test 8')
+consume('8 test')

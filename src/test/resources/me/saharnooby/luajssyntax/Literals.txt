@@ -1,0 +1,9 @@
+consume(nil)
+consume(true)
+consume(false)
+
+===
+
+consume(nil)
+consume(true)
+consume(false)

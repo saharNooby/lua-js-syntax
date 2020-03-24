@@ -1,0 +1,15 @@
+let x = 100
+
+do {
+    consume(x)
+    x--
+} while(x > 1)
+
+===
+
+local x = 100
+
+repeat
+    consume(x)
+    x = x - 1
+until (not(x > 1))

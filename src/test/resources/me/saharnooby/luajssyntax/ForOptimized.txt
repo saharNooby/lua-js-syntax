@@ -1,0 +1,85 @@
+for (let i = 0; i < 10; i++) {
+    consume(i)
+}
+
+for (let i = 10; i > 0; i--) {
+    consume(i)
+}
+
+for (let i = 0; i <= 10; i++) {
+    consume(i)
+}
+
+for (let i = 10; i >= 0; i--) {
+    consume(i)
+}
+
+for (let i = 0; i < 10; i += 2) {
+    consume(i)
+}
+
+for (let i = 10; i > 0; i -= 2) {
+    consume(i)
+}
+
+for (let i = 0; i <= 10; i += 2) {
+    consume(i)
+}
+
+for (let i = 10; i >= 0; i -= 2) {
+    consume(i)
+}
+
+for (let i = 0.23839; i < 5.32892; i += 0.032234) {
+    consume(i)
+}
+
+consume('check')
+
+for (let i = 0.23839; i <= 5.32892; i += 0.032234) {
+    consume(i)
+}
+
+===
+
+for i = 0, 9, 1 do
+    consume(i)
+end
+
+for i = 10, 1, -1 do
+    consume(i)
+end
+
+for i = 0, 10, 1 do
+    consume(i)
+end
+
+for i = 10, 0, -1 do
+    consume(i)
+end
+
+for i = 0, 9, 2 do
+    consume(i)
+end
+
+for i = 10, 1, -2 do
+    consume(i)
+end
+
+for i = 0, 10, 2 do
+    consume(i)
+end
+
+for i = 10, 0, -2 do
+    consume(i)
+end
+
+for i = 0.23839, 5.32891, 0.032234 do
+    consume(i)
+end
+
+consume('check')
+
+for i = 0.23839, 5.32892, 0.032234 do
+    consume(i)
+end

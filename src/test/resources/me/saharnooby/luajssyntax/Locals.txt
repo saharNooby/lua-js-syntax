@@ -1,0 +1,49 @@
+let x = 13
+
+consume(x)
+
+let y = 23
+
+{
+    let y = 11
+    consume(y)
+    y = 12
+    consume(y)
+}
+
+consume(y)
+
+let a, b = 44, 56
+
+consume(a, b)
+
+let c, d = 6, 7, 8
+
+let e, f, g = 1, 2
+consume(e, f, g)
+
+===
+
+local x = 13
+
+consume(x)
+
+local y = 23
+
+do
+    local y = 11
+    consume(y)
+    y = 12
+    consume(y)
+end
+
+consume(y)
+
+local a, b = 44, 56
+
+consume(a, b)
+
+local c, d = 6, 7, 8
+
+local e, f, g = 1, 2
+consume(e, f, g)

@@ -1,0 +1,37 @@
+function f() {
+    return
+}
+
+function g() {
+    return 1
+}
+
+function h() {
+    return 5, 7, 6
+}
+
+consume(f())
+consume(g())
+
+let x, y, z = h()
+consume(x, y, z)
+
+===
+
+function f()
+    return
+end
+
+function g()
+    return 1
+end
+
+function h()
+    return 5, 7, 6
+end
+
+consume(f())
+consume(g())
+
+local x, y, z = h()
+consume(x, y, z)

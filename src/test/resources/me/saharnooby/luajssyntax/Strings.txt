@@ -1,0 +1,33 @@
+consume("abc")
+consume("'")
+consume("юникод")
+consume("escapes 1\a\b\f\n\r\t\v\z\"\\ end")
+consume("\x01\xFF")
+consume("\u042f")
+consume("\0\123\255")
+
+consume('abc')
+consume('"')
+consume('юникод')
+consume('escapes 1\a\b\f\n\r\t\v\z\'\\ end')
+consume('\x01\xFF')
+consume('\u042f')
+consume('\0\123\255')
+
+===
+
+consume("abc")
+consume("'")
+consume("юникод")
+consume("escapes 1\a\b\f\n\r\t\v\z\"\\ end")
+consume("\x01\xFF")
+consume("Я")
+consume("\0\123\255")
+
+consume('abc')
+consume('"')
+consume('юникод')
+consume('escapes 1\a\b\f\n\r\t\v\z\'\\ end')
+consume('\x01\xFF')
+consume('Я')
+consume('\0\123\255')

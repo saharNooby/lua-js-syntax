@@ -1,0 +1,152 @@
+consume(- 82.50 + 76.89)
+consume(95.57 + - 34.37)
+consume(~ 85.53 + 39.26)
+consume(72.65 + ~ 37.49)
+
+consume(- 20.85 - 54.16)
+consume(22.37 - - 36.50)
+consume(~ 78.53 - 8.92)
+consume(21.44 - ~ 61.72)
+
+consume(- 30.33 * 52.75)
+consume(53.34 * - 35.86)
+consume(~ 48.42 * 43.50)
+consume(14.36 * ~ 43.50)
+
+consume(- 68.90 / 6.14)
+consume(50.54 / - 33.21)
+consume(~ 72.98 / 51.17)
+consume(39.43 / ~ 29.0)
+
+consume(- 97.98 % 18.27)
+consume(20.90 % - 88.49)
+consume(~ 14.75 % 26.93)
+consume(65.76 % ~ 87.50)
+
+consume(- 45.5 < 95.89)
+consume(89.83 < - 72.26)
+consume(~ 31.84 < 55.24)
+consume(1.56 < ~ 53.5)
+
+consume(- 37.99 > 71.89)
+consume(20.10 > - 58.60)
+consume(~ 27.27 > 0.36)
+consume(82.44 > ~ 20.50)
+
+consume(- 26.4 <= 76.88)
+consume(15.43 <= - 94.52)
+consume(~ 19.21 <= 32.47)
+consume(55.81 <= ~ 77.76)
+
+consume(- 35.58 >= 18.86)
+consume(36.33 >= - 41.21)
+consume(~ 95.36 >= 49.2)
+consume(13.89 >= ~ 68.41)
+
+consume(- 79.81 == 6.32)
+consume(19.3 == - 7.74)
+consume(~ 32.99 == 87.17)
+consume(80.51 == ~ 49.9)
+
+consume(- 36.13 != 51.49)
+consume(21.61 != - 26.37)
+consume(~ 2.37 != 74.11)
+consume(53.91 != ~ 41.69)
+
+consume(! 24.7 && 92.11)
+consume(14.2 && ! 59.53)
+consume(- 19.24 && 67.47)
+consume(64.69 && - 1.4)
+consume(~ 79.79 && 59.47)
+consume(99.39 && ~ 14.88)
+
+consume(! 49.91 || 87.76)
+consume(7.17 || ! 84.76)
+consume(- 86.97 || 30.95)
+consume(67.57 || - 70.37)
+consume(~ 34.22 || 29.35)
+consume(17.77 || ~ 33.29)
+
+consume(- 80.31 ** 61.22)
+consume(45.41 ** - 36.58)
+consume(~ 78.76 ** 31.60)
+consume(87.72 ** ~ 61.91)
+
+
+
+===
+
+
+consume(- 82.50 + 76.89)
+consume(95.57 + - 34.37)
+consume(bit32.bnot( 85.53) + 39.26)
+consume(72.65 + bit32.bnot( 37.49))
+
+consume(- 20.85 - 54.16)
+consume(22.37 - - 36.50)
+consume(bit32.bnot( 78.53) - 8.92)
+consume(21.44 - bit32.bnot( 61.72))
+
+consume(- 30.33 * 52.75)
+consume(53.34 * - 35.86)
+consume(bit32.bnot( 48.42) * 43.50)
+consume(14.36 * bit32.bnot( 43.50))
+
+consume(- 68.90 / 6.14)
+consume(50.54 / - 33.21)
+consume(bit32.bnot( 72.98) / 51.17)
+consume(39.43 / bit32.bnot( 29.0))
+
+consume(- 97.98 % 18.27)
+consume(20.90 % - 88.49)
+consume(bit32.bnot( 14.75) % 26.93)
+consume(65.76 % bit32.bnot( 87.50))
+
+consume(- 45.5 < 95.89)
+consume(89.83 < - 72.26)
+consume(bit32.bnot( 31.84) < 55.24)
+consume(1.56 < bit32.bnot( 53.5))
+
+consume(- 37.99 > 71.89)
+consume(20.10 > - 58.60)
+consume(bit32.bnot( 27.27) > 0.36)
+consume(82.44 > bit32.bnot( 20.50))
+
+consume(- 26.4 <= 76.88)
+consume(15.43 <= - 94.52)
+consume(bit32.bnot( 19.21) <= 32.47)
+consume(55.81 <= bit32.bnot( 77.76))
+
+consume(- 35.58 >= 18.86)
+consume(36.33 >= - 41.21)
+consume(bit32.bnot( 95.36) >= 49.2)
+consume(13.89 >= bit32.bnot( 68.41))
+
+consume(- 79.81 == 6.32)
+consume(19.3 == - 7.74)
+consume(bit32.bnot( 32.99) == 87.17)
+consume(80.51 == bit32.bnot( 49.9))
+
+consume(- 36.13 ~= 51.49)
+consume(21.61 ~= - 26.37)
+consume(bit32.bnot( 2.37) ~= 74.11)
+consume(53.91 ~= bit32.bnot( 41.69))
+
+consume(not  24.7 and 92.11)
+consume(14.2 and not  59.53)
+consume(- 19.24 and 67.47)
+consume(64.69 and - 1.4)
+consume(bit32.bnot( 79.79) and 59.47)
+consume(99.39 and bit32.bnot( 14.88))
+
+consume(not  49.91 or 87.76)
+consume(7.17 or not  84.76)
+consume(- 86.97 or 30.95)
+consume(67.57 or - 70.37)
+consume(bit32.bnot( 34.22) or 29.35)
+consume(17.77 or bit32.bnot( 33.29))
+
+consume(- 80.31 ^ 61.22)
+consume(45.41 ^ - 36.58)
+consume(bit32.bnot( 78.76) ^ 31.60)
+consume(87.72 ^ bit32.bnot( 61.91))

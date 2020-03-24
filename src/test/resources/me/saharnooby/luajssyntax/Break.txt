@@ -1,0 +1,29 @@
+let x = 1
+
+while (true) {
+    x += 5
+
+    if (x > 50) {
+        break
+    }
+
+    consume(x)
+}
+
+consume(x)
+
+===
+
+local x = 1
+
+while true do
+    x = x + 5
+
+    if x > 50 then
+        break
+    end
+
+    consume(x)
+end
+
+consume(x)

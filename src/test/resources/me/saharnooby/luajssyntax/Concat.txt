@@ -1,0 +1,13 @@
+consume('abc' .. 'def')
+consume('abc' .. 1)
+consume('abc ' .. 1 .. ' def')
+consume('abc ' .. 1 .. ' def' .. [1, 2, 3])
+consume('abc ' .. 1 .. ' def' .. {x: 1, y: 2, z: 3})
+
+===
+
+consume('abc' .. 'def')
+consume('abc' .. tostring(1))
+consume('abc ' .. tostring(1) .. ' def')
+consume('abc ' .. tostring(1) .. ' def' .. tostring({1, 2, 3}))
+consume('abc ' .. tostring(1) .. ' def' .. tostring({x = 1, y = 2, z = 3}))

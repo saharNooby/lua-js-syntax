@@ -1,0 +1,97 @@
+let x = 2389
+x += 278
+consume(x)
+
+x = 2389
+x -= 278
+consume(x)
+
+x = 2389
+x *= 278
+consume(x)
+
+x = 2389
+x /= 278
+consume(x)
+
+x = 2389
+x %= 278
+consume(x)
+
+x = 2389
+x &= 278
+consume(x)
+
+x = 2389
+x |= 278
+consume(x)
+
+x = 2389
+x ^= 278
+consume(x)
+
+x = 2389
+x >>= 3
+consume(x)
+
+x = 2389
+x <<= 3
+consume(x)
+
+let y = 'abc'
+y ..= '123'
+consume(y)
+
+x = 23
+x **= 5
+consume(x)
+
+===
+
+local x = 2389
+x = x + 278
+consume(x)
+
+x = 2389
+x = x - 278
+consume(x)
+
+x = 2389
+x = x * 278
+consume(x)
+
+x = 2389
+x = x / 278
+consume(x)
+
+x = 2389
+x = x % 278
+consume(x)
+
+x = 2389
+x = bit32.band(x, 278)
+consume(x)
+
+x = 2389
+x = bit32.bor(x, 278)
+consume(x)
+
+x = 2389
+x = bit32.bxor(x, 278)
+consume(x)
+
+x = 2389
+x = bit32.rshift(x, 3)
+consume(x)
+
+x = 2389
+x = bit32.lshift(x, 3)
+consume(x)
+
+local y = 'abc'
+y = y..'123'
+consume(y)
+
+x = 23
+x = x ^ 5
+consume(x)

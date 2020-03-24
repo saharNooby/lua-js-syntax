@@ -1,0 +1,27 @@
+for (v of [-20, -1, 0, 1, 239, 34.389]) {
+    consume(~v)
+    consume(-v)
+}
+
+for (v of [true, false, nil]) {
+    consume(!v)
+}
+
+for (v of [[], [1], [1, 2], {[1]: 'x'}]) {
+    consume(#v)
+}
+
+===
+
+for i, v in ipairs({-20, -1, 0, 1, 239, 34.389}) do
+    consume(bit32.bnot(v))
+    consume(-v)
+end
+
+for i, v in ipairs({true, false, nil}) do
+    consume(not v)
+end
+
+for i, v in ipairs({{}, {1}, {1, 2}, {[1] = 'x'}}) do
+    consume(#v)
+end

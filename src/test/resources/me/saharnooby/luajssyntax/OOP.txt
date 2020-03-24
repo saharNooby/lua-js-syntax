@@ -1,0 +1,69 @@
+Dog = {}
+
+function Dog::new() {
+  newObj = {sound: 'woof'}
+  self.__index = self
+  return setmetatable(newObj, self)
+}
+
+function Dog::makeSound() {
+  return 'I say ' .. self.sound
+}
+
+mrDog = Dog::new()
+consume(mrDog::makeSound())
+
+//--------------------------------------------------
+
+LoudDog = Dog::new()
+
+function LoudDog::makeSound() {
+  s = self.sound .. ' '
+  return s .. s .. s
+}
+
+seymour = LoudDog::new()
+consume(seymour::makeSound())
+
+function LoudDog::new() {
+  newObj = {}
+  self.__index = self
+  return setmetatable(newObj, self)
+}
+
+===
+
+Dog = {}
+
+function Dog:new()
+  newObj = {sound = 'woof'}
+  self.__index = self
+  return setmetatable(newObj, self)
+end
+
+function Dog:makeSound()
+  return 'I say ' .. self.sound
+end
+
+mrDog = Dog:new()
+consume(mrDog:makeSound())
+
+----------------------------------------------------
+
+LoudDog = Dog:new()
+
+function LoudDog:makeSound()
+  s = self.sound .. ' '
+  return s .. s .. s
+end
+
+seymour = LoudDog:new()
+consume(seymour:makeSound())
+
+function LoudDog:new()
+  newObj = {}
+  -- set up newObj
+  self.__index = self
+  return setmetatable(newObj, self)
+end
+

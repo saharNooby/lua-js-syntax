@@ -1,0 +1,49 @@
+let a = {}
+let b = {key: 2389.3489}
+let c = {x: 2389, y: 'test', z: 23,}
+let d = {[1 + 4.43]: 'value'}
+let e = {nested: d}
+let f = {moreNested: e}
+
+consume(a)
+consume(b)
+consume(b.key)
+consume(c)
+consume(c.x)
+consume(c.y)
+consume(c.z)
+consume(d)
+consume(d[1 + 4.43])
+consume(e)
+consume(e.nested)
+consume(e.nested[1 + 4.43])
+consume(f)
+consume(f.moreNested)
+consume(f.moreNested.nested)
+consume(f.moreNested.nested[1 + 4.43])
+
+===
+
+local a = {}
+local b = {key = 2389.3489}
+local c = {x = 2389, y = 'test', z = 23}
+local d = {[1 + 4.43] = 'value'}
+local e = {nested = d}
+local f = {moreNested = e}
+
+consume(a)
+consume(b)
+consume(b.key)
+consume(c)
+consume(c.x)
+consume(c.y)
+consume(c.z)
+consume(d)
+consume(d[1 + 4.43])
+consume(e)
+consume(e.nested)
+consume(e.nested[1 + 4.43])
+consume(f)
+consume(f.moreNested)
+consume(f.moreNested.nested)
+consume(f.moreNested.nested[1 + 4.43])

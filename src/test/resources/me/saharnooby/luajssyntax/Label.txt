@@ -1,0 +1,35 @@
+let x = 1
+
+while (x < 100) {
+    x += 5
+
+    if (x >= 50) {
+        consume(-1)
+        goto label
+    }
+
+    consume(x)
+}
+
+label:
+
+consume(x)
+
+===
+
+local x = 1
+
+while (x < 100) do
+    x = x + 5
+
+    if (x >= 50) then
+        consume(-1)
+        goto label
+    end
+
+    consume(x)
+end
+
+::label::
+
+consume(x)
