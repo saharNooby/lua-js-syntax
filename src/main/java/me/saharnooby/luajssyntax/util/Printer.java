@@ -1,4 +1,4 @@
-package me.saharnooby.luajssyntax;
+package me.saharnooby.luajssyntax.util;
 
 import lombok.NonNull;
 import lombok.Setter;
@@ -10,7 +10,7 @@ import java.io.UncheckedIOException;
  * @author saharNooby
  * @since 19:01 21.08.2019
  */
-final class Printer {
+public final class Printer {
 
 	private final Appendable destination;
 

@@ -1,6 +1,8 @@
 package me.saharnooby.luajssyntax;
 
 import lombok.NonNull;
+import me.saharnooby.luajssyntax.exception.InvalidSyntaxException;
+import me.saharnooby.luajssyntax.util.Printer;
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.Token;
 import org.antlr.v4.runtime.tree.ParseTree;

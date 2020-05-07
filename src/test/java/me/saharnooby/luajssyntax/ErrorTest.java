@@ -1,5 +1,6 @@
 package me.saharnooby.luajssyntax;
 
+import me.saharnooby.luajssyntax.exception.InvalidSyntaxException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

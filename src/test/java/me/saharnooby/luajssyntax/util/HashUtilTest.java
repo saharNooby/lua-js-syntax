@@ -1,4 +1,4 @@
-package me.saharnooby.luajssyntax;
+package me.saharnooby.luajssyntax.util;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

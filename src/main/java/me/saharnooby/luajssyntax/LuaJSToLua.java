@@ -1,9 +1,10 @@
 package me.saharnooby.luajssyntax;
 
 import lombok.NonNull;
-import org.antlr.v4.runtime.CharStream;
-import org.antlr.v4.runtime.CharStreams;
-import org.antlr.v4.runtime.CommonTokenStream;
+import me.saharnooby.luajssyntax.exception.InvalidSyntaxException;
+import me.saharnooby.luajssyntax.util.HashUtil;
+import me.saharnooby.luajssyntax.util.Printer;
+import org.antlr.v4.runtime.*;
 
 /**
  * This class provides a method to convert LuaJS source code to Lua code.
@@ -11,6 +12,15 @@ import org.antlr.v4.runtime.CommonTokenStream;
  * @since 19:06 21.08.2019
  */
 public final class LuaJSToLua {
+
+	private static final BaseErrorListener THROWING_LISTENER = new BaseErrorListener() {
+
+		@Override
+		public void syntaxError(Recognizer<?, ?> recognizer, Object offendingSymbol, int line, int charPositionInLine, String msg, RecognitionException e) {
+			throw new InvalidSyntaxException(line, charPositionInLine, msg, e);
+		}
+
+	};
 
 	/**
 	 * Converts LuaJS source code to Lua, preserving line numbers.
@@ -39,14 +49,14 @@ public final class LuaJSToLua {
 		LuaJSSyntaxLexer lexer = new LuaJSSyntaxLexer(in);
 
 		lexer.removeErrorListeners();
-		lexer.addErrorListener(ThrowingErrorListener.INSTANCE);
+		lexer.addErrorListener(THROWING_LISTENER);
 
 		CommonTokenStream tokens = new CommonTokenStream(lexer);
 
 		LuaJSSyntaxParser parser = new LuaJSSyntaxParser(tokens);
 
 		parser.removeErrorListeners();
-		parser.addErrorListener(ThrowingErrorListener.INSTANCE);
+		parser.addErrorListener(THROWING_LISTENER);
 
 		LuaJSSyntaxParser.ProgramContext program = parser.program();
 

@@ -1,4 +1,4 @@
-package me.saharnooby.luajssyntax;
+package me.saharnooby.luajssyntax.util;
 
 import lombok.NonNull;
 
@@ -11,7 +11,7 @@ import java.security.NoSuchAlgorithmException;
  * @author saharNooby
  * @since 22:14 23.08.2019
  */
-final class HashUtil {
+public final class HashUtil {
 
 	public static String md5(@NonNull String s) {
 		try {

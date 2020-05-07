@@ -1,4 +1,4 @@
-package me.saharnooby.luajssyntax;
+package me.saharnooby.luajssyntax.exception;
 
 import lombok.Getter;
 import lombok.NonNull;
@@ -30,7 +30,7 @@ public final class InvalidSyntaxException extends RuntimeException {
 	 */
 	private final String originalMessage;
 
-	InvalidSyntaxException(int line, int charPosition, @NonNull String message, RecognitionException cause) {
+	public InvalidSyntaxException(int line, int charPosition, @NonNull String message, RecognitionException cause) {
 		super("line " + line + ":" + charPosition + " " + message, cause);
 		this.originalMessage = message;
 		this.line = line;
