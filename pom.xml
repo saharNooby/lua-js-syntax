@@ -16,6 +16,8 @@
     </properties>
 
     <build>
+        <defaultGoal>clean install</defaultGoal>
+
         <plugins>
             <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
