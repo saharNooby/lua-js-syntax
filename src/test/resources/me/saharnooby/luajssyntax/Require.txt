@@ -1,0 +1,17 @@
+require("test_module")
+
+consume(test_module.calculate(123))
+
+let moduleInVar = require("test_module")
+
+consume(moduleInVar.calculate(456))
+
+===
+
+require "test_module"
+
+consume(test_module.calculate(123))
+
+local moduleInVar = require "test_module"
+
+consume(moduleInVar.calculate(456))

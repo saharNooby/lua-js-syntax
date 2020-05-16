@@ -211,6 +211,11 @@ class ConverterTest {
 		test();
 	}
 
+	@Test
+	void testRequire() {
+		test();
+	}
+
 	// The behavior of this method is caller dependent.
 	private void test() {
 		String testName = new Exception().getStackTrace()[1].getMethodName().substring(4);
@@ -283,6 +288,9 @@ class ConverterTest {
 		globals.load(new JseMathLib());
 
 		LuaC.install(globals);
+
+		// Required for module loading
+		globals.undumper = (stream, chunkname) -> null;
 
 		globals.set("tostring", new LibFunction() {
 
