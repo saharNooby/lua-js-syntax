@@ -413,10 +413,16 @@ someObject:printSomething()
 
 To build, you need:
 - git
-- Maven
-- JDK 8+
+- [JDK 8 or higher](https://adoptopenjdk.net/)
+- [Maven](http://maven.apache.org/)
 
-`git clone` the repository, `cd` into its dir and run `mvn clean install`.
+This will put JAR file to `target` dir and install it into local Maven repository:
+
+```shell script
+git clone https://github.com/saharNooby/lua-js-syntax.git
+cd lua-js-syntax
+mvn clean install
+```
 
 ## Running
 
@@ -447,7 +453,7 @@ If the source file was not specified, source code will be read from `stdin`.
 
 If the destination file was not specified, resulting code will be written to `stdout`.
 
-Any errors will result in non-zero exit code and stacktraces printed into `stderr`.
+Any errors will result in non-zero exit code and stacktraces printed to `stderr`.
 
 ## Testing
 
